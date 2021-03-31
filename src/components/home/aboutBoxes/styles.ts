@@ -40,7 +40,7 @@ export const Box = styled.div`
 export const BoxIcon = styled.div`
     width: 40px;
     height: 40px;
-    margin: 0  0 8px 0;
+    margin: 0  0 16px 0;
     background: ${colors.text};
 
     @media only screen and (min-width: 425px) {

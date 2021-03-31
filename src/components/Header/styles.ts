@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
-import { typography } from '../../shared/theme'
+import { colors, typography } from '../../shared/theme'
 
 export const Wrapper = styled.div`
     display: flex;
@@ -8,7 +9,7 @@ export const Wrapper = styled.div`
     align-items: flex-end;
     margin: 8px 24px 40px 24px;
 
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 768px) {
         position: fixed;
         top: 0;
         left: 0;
@@ -29,10 +30,10 @@ export const Wrapper = styled.div`
         0 21px 42px rgba(0, 0, 0, 0.04);
     }
 
-    @media only screen and (min-width: 768px) {
-        margin: 40px 0;
-        align-items: center;
-    }
+    // @media only screen and (min-width: 768px) {
+    //     margin: 40px 0;
+    //     align-items: center;
+    // }
 `
 
 export const MobilToggleOnePrintWrapper = styled.div`
@@ -41,9 +42,9 @@ export const MobilToggleOnePrintWrapper = styled.div`
     justify-content: space-between;
     width: 100%;
 
-    @media only screen and (min-width: 768px) {
-        width: auto;
-    }
+    // @media only screen and (min-width: 768px) {
+    //     width: auto;
+    // }
 `
 
 export const TextWrapper = styled.div`
@@ -51,11 +52,12 @@ export const TextWrapper = styled.div`
     flex-direction: column;
     align-items: flex-end;
     margin-bottom: 8px;
+    user-select: none;
 
-    @media only screen and (min-width: 768px) {
-        flex-direction: row;
-        align-items: center;
-    }
+    // @media only screen and (min-width: 768px) {
+    //     flex-direction: row;
+    //     align-items: center;
+    // }
 `
 
 export const onePrintWrapper = styled.div`
@@ -81,13 +83,38 @@ export const grafickeStudio = styled.div`
     margin-left: 8px;
 `
 
-export const subTitle = styled.div`
-    font-size: ${typography.fontSize[12]};
-    font-weight: ${typography.fontWeight.regular};
-    color: #6C707B;
-    text-align: center;
+// export const subTitle = styled.div`
+//     font-size: ${typography.fontSize[12]};
+//     font-weight: ${typography.fontWeight.regular};
+//     color: #6C707B;
+//     text-align: center;
 
-    @media only screen and (max-width: 767px) {
-        display: none;
+//     @media only screen and (max-width: 767px) {
+//         display: none;
+//     }
+// `
+
+
+//
+
+export const Links = styled.div`
+    display: none;
+
+    @media only screen and (min-width: 768px) {
+        display: flex;
+    }
+`
+
+export const Link = styled(AnchorLink)`
+    font-size: ${typography.fontSize[16]};
+    font-weight: ${typography.fontWeight.medium};
+    margin: 8px;
+    text-decoration: none;
+    color: ${colors.text};
+
+    transition: transform .3s;
+
+    &:hover {
+        transform: translateY(-2px);
     }
 `

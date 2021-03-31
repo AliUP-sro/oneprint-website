@@ -50,6 +50,8 @@ export const Box = styled.div<{ background?: string }>`
         width: ${1.5 * BOX_WIDTH}px;
         height: ${1.5 * BOX_HEIGHT}px;
     }
+
+    user-select: none;
 `
 
 export const BoxText = styled.div`

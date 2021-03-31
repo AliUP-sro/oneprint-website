@@ -103,7 +103,7 @@ export const Link = styled(AnchorLink)`
     align-items: center;
     justify-content: space-between;
     text-decoration: none;
-    margin: 8px 0;
+    margin: 16px 0;
 `
 
 export const LinkText = styled.div`
