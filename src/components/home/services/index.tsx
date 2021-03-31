@@ -52,7 +52,7 @@ const Services = () => {
                 </S.ServiceText>
                 </S.Service>
             </S.Boxes>
-            <S.Button>Ceník</S.Button>
+            <S.Button to='/cenik'>Ceník</S.Button>
         </S.Wrapper>
     )
 }

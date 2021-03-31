@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 import { colors, typography } from '../../shared/theme'
 
@@ -40,9 +41,12 @@ export const Links = styled.div`
     flex-direction: column;
 `
 
-export const Link = styled.div`
+export const Link = styled(AnchorLink)`
+    display: block;
+    text-decoration: none;
     font-size: ${typography.fontSize[16]};
     font-weight: ${typography.fontWeight.regular};
+    color: #FFF;
     margin-top: 8px;
 
     &:hover {

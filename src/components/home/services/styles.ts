@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 import { colors, typography } from '../../../shared/theme'
 
@@ -76,10 +77,11 @@ export const ServiceText = styled.div`
     line-height: ${typography.fontSize[25]};
 `
 
-export const Button = styled.div`
+export const Button = styled(AnchorLink)`
     font-size: ${typography.fontSize[20]};
     background: ${colors.white};
     color: ${colors.black};
+    display: block;
     
     padding: 10px 0;
     border-radius: 4px;
@@ -89,6 +91,7 @@ export const Button = styled.div`
     text-align: center;
     cursor: pointer;
     transition: transform .3s;
+    text-decoration: none;
 
     box-shadow:
         0 0.3px 0.8px rgba(0, 0, 0, 0.022),

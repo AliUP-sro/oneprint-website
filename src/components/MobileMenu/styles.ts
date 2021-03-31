@@ -10,7 +10,7 @@ export const Wrapper = styled.div<{ visible: boolean }>`
     right: 0;
     z-index: 99999999;
 
-    transition: transform .3s;
+    transition: all .5s cubic-bezier(0.34, 1.26, 0.64, 1);
     transform: translateY(${({ visible }) => !!visible ? '0vh' : '-100vh'});
 
     color: #FFF;

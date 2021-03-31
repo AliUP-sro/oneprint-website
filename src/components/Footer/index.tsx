@@ -20,11 +20,11 @@ const Footer: React.FunctionComponent = () => {
                     Menu
                 </S.Title>
                 <S.Links>
-                    <S.Link>O nás</S.Link>
-                    <S.Link>Služby</S.Link>
-                    <S.Link>Ceník</S.Link>
-                    <S.Link>Projekty</S.Link>
-                    <S.Link>Klienti</S.Link>
+                    <S.Link to='/#about'>O nás</S.Link>
+                    <S.Link  to='/#services'>Služby</S.Link>
+                    <S.Link  to='/cenik'>Ceník</S.Link>
+                    <S.Link  to='/#projects'>Projekty</S.Link>
+                    <S.Link  to='/#clients'>Klienti</S.Link>
                 </S.Links>
             </S.Box>
         </S.Wrapper>
