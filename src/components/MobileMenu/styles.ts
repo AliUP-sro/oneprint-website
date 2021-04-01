@@ -7,19 +7,26 @@ export const Wrapper = styled.div<{ visible: boolean }>`
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    z-index: 99999999;
 
-    transition: all .5s cubic-bezier(0.34, 1.26, 0.64, 1);
-    transform: translateY(${({ visible }) => !!visible ? '0vh' : '-100vh'});
+    z-index: 99999999;
 
     color: #FFF;
     background: #393C44;
     height: 100vh;
     padding: 8px 24px 24px 24px;
 
+    transition: all .5s cubic-bezier(0.34, 1.26, 0.64, 1);
+    transform: translateY(${({ visible }) => !!visible ? '0vh' : '-100vh'});
+
+    @media only screen and (max-width: 767px) {
+        right: 0;
+    }
+
     @media only screen and (min-width: 768px) {
-        display: none;
+        width: 360px;
+
+        // transition: all .5s cubic-bezier(0.34, 1.26, 0.64, 1);
+        // transform: translateX(${({ visible }) => !!visible ? '0px' : '-360px'});
     }
 `
 
@@ -31,16 +38,16 @@ export const Toggle = styled.div<{ backgroundUri: string }>`
     ${({ backgroundUri }) => !!backgroundUri && `background: url(${backgroundUri}) no-repeat;`};
     background-size: contain;
     background-position: center;
-
-    @media only screen and (min-width: 768px) {
-        display: none;
-    }
 `
 
 export const CrossToggle = styled.div<{ backgroundUri: string }>`
     width: 24px;
     height: 24px;
     cursor: pointer;
+
+    @media only screen and (min-width: 768px) {
+        margin-left: 16px;
+    }
 
     ${({ backgroundUri }) => !!backgroundUri && `background: url(${backgroundUri}) no-repeat;`};
     background-size: contain;
@@ -60,11 +67,6 @@ export const TextWrapper = styled.div`
     flex-direction: column;
     align-items: flex-end;
     margin-bottom: 8px;
-
-    @media only screen and (min-width: 768px) {
-        flex-direction: row;
-        align-items: center;
-    }
 `
 
 export const onePrintWrapper = styled.div`
@@ -95,7 +97,8 @@ export const grafickeStudio = styled.div`
 export const Links = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 20%;
+    justify-content: center;
+    margin-top: 80px;
 `
 
 export const Link = styled(AnchorLink)`
@@ -103,11 +106,11 @@ export const Link = styled(AnchorLink)`
     align-items: center;
     justify-content: space-between;
     text-decoration: none;
-    margin: 16px 0;
+    margin: 8px 0;
 `
 
 export const LinkText = styled.div`
-    font-size: ${typography.fontSize[31]};
+    font-size: ${typography.fontSize[25]};
     font-weight: ${typography.fontWeight.semiBold};
     color: ${colors.white};
 `
@@ -119,4 +122,12 @@ export const LinkIcon = styled.div<{ backgroundUri: string }>`
     ${({ backgroundUri }) => !!backgroundUri && `background: url(${backgroundUri}) no-repeat;`};
     background-size: contain;
     background-position: center;
+
+    transition transform .3s;
+
+    @media only screen and (min-width: 768px) {
+        ${Link}:hover & {
+            transform: translateX(5px);
+        }
+    }
 `

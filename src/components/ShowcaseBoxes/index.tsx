@@ -111,10 +111,6 @@ const ShowcaseBoxes = ({ }: Props) => {
         {
             background: colors.mainPageCards.slime,
             text: 'E-shop'
-        },
-        {
-            background: colors.mainPageCards.blue,
-            text: 'Ceník'
         }
     ]
 

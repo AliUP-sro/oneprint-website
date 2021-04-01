@@ -11,7 +11,11 @@ const useMobilToggle = () => {
         visible: toggled,
         show: () => {
             setToggled(true)
-            if(!!document) document.body.style.overflow = 'hidden';
+            if(!!document) {
+                if(!!window && window.matchMedia("(max-width: 768px)").matches) {
+                    document.body.style.overflow = 'hidden';
+                }
+            }
         },
         hide: () => {
             setToggled(false)

@@ -30,10 +30,9 @@ export const Wrapper = styled.div`
         0 21px 42px rgba(0, 0, 0, 0.04);
     }
 
-    // @media only screen and (min-width: 768px) {
-    //     margin: 40px 0;
-    //     align-items: center;
-    // }
+    @media only screen and (min-width: 768px) {
+        margin: 8px 40px;
+    }
 `
 
 export const MobilToggleOnePrintWrapper = styled.div`

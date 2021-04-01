@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
@@ -13,6 +14,13 @@ type Props = {
 }
 
 const Layout = ({ children }: Props) => {
+
+  const data = useStaticQuery(graphql`query {
+    file(relativePath: { eq: "favicon.svg" }) {
+        publicURL
+}}`)
+
+
   return (
     <Wrapper>
       <Helmet
@@ -22,6 +30,12 @@ const Layout = ({ children }: Props) => {
           { name: 'keywords', content: 'oneprint, one, print' },
         ]}
         link={[
+          {
+            rel: 'icon',
+            href: data.file.publicURL,
+            sizes: 'any',
+            type: 'image/svg.xml'
+          },
           {
             href: 'https://fonts.googleapis.com/css2?family=Raleway:wght@300,400;500;600;700&display=swap',
             type: 'stylesheet'
