@@ -15,7 +15,7 @@ const Clients = () => {
                 node {
                     childImageSharp {
                         fixed(height: 32) {
-                            ...GatsbyImageSharpFixed
+                            ...GatsbyImageSharpFixed_withWebp_tracedSVG
                         }
                     }
                 }

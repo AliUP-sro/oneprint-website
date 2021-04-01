@@ -25,6 +25,9 @@ const Layout = ({ children }: Props) => {
     <Wrapper>
       <Helmet
         title="onePRINT"
+        htmlAttributes={{
+          lang: 'cz',
+        }}
         meta={[
           { name: 'description', content: 'onePRINT webové prezentace' },
           { name: 'keywords', content: 'oneprint, one, print' },

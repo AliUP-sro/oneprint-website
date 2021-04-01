@@ -48,10 +48,11 @@ export const BlobWrapper = styled.div<{ backgroundUri: string }>`
     }
 `
 
-export const BlobText = styled.div`
+export const BlobText = styled.h1`
     font-size: ${typography.fontSize[25]};
     font-weight: ${typography.fontWeight.medium};
     color: ${colors.text};
+    margin: 0;
 
     padding: 0 16px;
     width: 100%;
@@ -88,7 +89,8 @@ export const TextBlock = styled.div`
     }
 `
 
-export const TextBlockHeader = styled.div`
+export const TextBlockHeader = styled.h1`
+    margin: 0;
     font-size: ${typography.fontSize[20]};
     font-weight: ${typography.fontWeight.semiBold};
 `

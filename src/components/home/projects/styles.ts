@@ -82,7 +82,8 @@ export const ProjectBox = styled.div`
     }
 `
 
-export const ProjectBoxTitle = styled.div`
+export const ProjectBoxTitle = styled.h1`
+    margin: 0;
     font-size: ${typography.fontSize[20]};
     font-weight: ${typography.fontWeight.bold};
     margin-bottom: 8px;

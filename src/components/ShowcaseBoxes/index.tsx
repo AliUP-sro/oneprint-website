@@ -34,35 +34,40 @@ const ShowcaseBoxes = ({ }: Props) => {
         desk: file(relativePath: { eq: "desk.jpg" }) {
             childImageSharp {
                 fluid(maxWidth: 400) {
-                    ...GatsbyImageSharpFluid_noBase64
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                    ...GatsbyImageSharpFluidLimitPresentationSize
                 }
             }
         }
         ruce: file(relativePath: { eq: "ruce.jpg" }) {
             childImageSharp {
                 fluid(maxWidth: 400) {
-                    ...GatsbyImageSharpFluid_noBase64
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                    ...GatsbyImageSharpFluidLimitPresentationSize
                 }
             }
         }
         colors: file(relativePath: { eq: "colors.jpg" }) {
             childImageSharp {
                 fluid(maxWidth: 400) {
-                    ...GatsbyImageSharpFluid_noBase64
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                    ...GatsbyImageSharpFluidLimitPresentationSize
                 }
             }
         }
         textil: file(relativePath: { eq: "textil.jpg" }) {
             childImageSharp {
                 fluid(maxWidth: 400) {
-                    ...GatsbyImageSharpFluid_noBase64
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                    ...GatsbyImageSharpFluidLimitPresentationSize
                 }
             }
         }
         boxedLogo: file(relativePath: { eq: "box_logo.jpg" }) {
             childImageSharp {
                 fluid(maxWidth: 400) {
-                    ...GatsbyImageSharpFluid_noBase64
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                    ...GatsbyImageSharpFluidLimitPresentationSize
                 }
             }
         }

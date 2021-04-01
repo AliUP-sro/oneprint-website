@@ -27,7 +27,7 @@ export const Boxes = styled.div`
     justify-content: space-between;
 `
 
-export const Title = styled.div`
+export const Title = styled.h1`
     text-transform: uppercase;
     font-weight: ${typography.fontWeight.light};
     font-size: ${typography.fontSize[39]};
