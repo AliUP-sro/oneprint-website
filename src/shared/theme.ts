@@ -16,7 +16,7 @@ export const colors = {
     },
 
     // Cards
-    cardBackground: '#F7F7F7',
+    cardBackground: '#f3f3f3',
 
     // Main page cards
     mainPageCards: {

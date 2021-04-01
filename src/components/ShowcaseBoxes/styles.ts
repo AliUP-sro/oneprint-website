@@ -20,7 +20,7 @@ export const Box = styled.div<{ background?: string }>`
     width: calc(100% / 2);
     height: 180px;
 
-    background: ${({ background }) => background || 'red'};
+    background: ${({ background }) => background || 'white'};
     
     display: flex;
     align-items: center;

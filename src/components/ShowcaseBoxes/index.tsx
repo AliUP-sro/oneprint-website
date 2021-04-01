@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Img, { FixedObject } from "gatsby-image"
+import Img, { FixedObject, FluidObject } from "gatsby-image"
 import { useThrottle } from '@react-hook/throttle'
 
 import { colors } from '../../shared/theme'
@@ -8,7 +8,7 @@ import { colors } from '../../shared/theme'
 import * as S from './styles'
 
 type Card = {
-    image?: FixedObject
+    image?: FluidObject
     text?: string
     background?: string
 }
@@ -33,36 +33,36 @@ const ShowcaseBoxes = ({ }: Props) => {
     const data = useStaticQuery(graphql`query {
         desk: file(relativePath: { eq: "desk.jpg" }) {
             childImageSharp {
-                fixed(width: 280, height: 230) {
-                    ...GatsbyImageSharpFixed
+                fluid(maxWidth: 400) {
+                    ...GatsbyImageSharpFluid_noBase64
                 }
             }
         }
         ruce: file(relativePath: { eq: "ruce.jpg" }) {
             childImageSharp {
-                fixed(width: 280, height: 230) {
-                    ...GatsbyImageSharpFixed
+                fluid(maxWidth: 400) {
+                    ...GatsbyImageSharpFluid_noBase64
                 }
             }
         }
         colors: file(relativePath: { eq: "colors.jpg" }) {
             childImageSharp {
-                fixed(width: 280, height: 230) {
-                    ...GatsbyImageSharpFixed
+                fluid(maxWidth: 400) {
+                    ...GatsbyImageSharpFluid_noBase64
                 }
             }
         }
         textil: file(relativePath: { eq: "textil.jpg" }) {
             childImageSharp {
-                fixed(width: 280, height: 230) {
-                    ...GatsbyImageSharpFixed
+                fluid(maxWidth: 400) {
+                    ...GatsbyImageSharpFluid_noBase64
                 }
             }
         }
         boxedLogo: file(relativePath: { eq: "box_logo.jpg" }) {
             childImageSharp {
-                fixed(width: 280, height: 230) {
-                    ...GatsbyImageSharpFixed
+                fluid(maxWidth: 400) {
+                    ...GatsbyImageSharpFluid_noBase64
                 }
             }
         }
@@ -74,35 +74,35 @@ const ShowcaseBoxes = ({ }: Props) => {
             text: 'Velkoformátový tisk'
         },
         {
-            image: data.desk.childImageSharp.fixed
+            image: data.desk.childImageSharp.fluid
         },
         {
             background: colors.mainPageCards.green,
             text: 'Gravírování laserem'
         },
         {
-            image: data.boxedLogo.childImageSharp.fixed
+            image: data.boxedLogo.childImageSharp.fluid
         },
         {
             background: colors.mainPageCards.blue,
             text: 'Reklamní textil'
         },
         {
-            image: data.textil.childImageSharp.fixed
+            image: data.textil.childImageSharp.fluid
         },
         {
             background: colors.mainPageCards.slime,
             text: 'Propagační tisk'
         },
         {
-            image: data.colors.childImageSharp.fixed
+            image: data.colors.childImageSharp.fluid
         },
         {
             background: colors.mainPageCards.blue,
             text: 'Web design'
         },
         {
-            image: data.ruce.childImageSharp.fixed
+            image: data.ruce.childImageSharp.fluid
         },
         {
             background: colors.mainPageCards.black,
@@ -123,9 +123,13 @@ const ShowcaseBoxes = ({ }: Props) => {
                             background={card.background}
                         >
                             {
-                                !!card.image && <Img fixed={card.image} style={{ width: '100%', height: '100%' }} imgStyle={{
-                                    objectFit: "cover"
-                                  }} />
+                                !!card.image && <Img
+                                    fluid={card.image}
+                                    style={{ width: '100%', height: '100%' }}
+                                    imgStyle={{
+                                        objectFit: "cover"
+                                    }}
+                                />
                             }
                             {
                                 !!card.text && <S.BoxText>{card.text}</S.BoxText>
