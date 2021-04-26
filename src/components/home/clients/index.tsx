@@ -14,7 +14,7 @@ const Clients = () => {
             edges {
                 node {
                     childImageSharp {
-                        fixed(height: 32) {
+                        fixed(height: 40, quality: 100,webpQuality: 100) {
                             ...GatsbyImageSharpFixed_withWebp_tracedSVG
                         }
                     }
@@ -26,7 +26,7 @@ const Clients = () => {
     const logos = data.allFile.edges
 
     const styles = {
-        margin: 8
+        margin: '8px'
     }
     
     return (
