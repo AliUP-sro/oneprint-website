@@ -63,7 +63,6 @@ const ShowcaseBoxes = ({ }: Props) => {
             childImageSharp {
                 fluid(maxWidth: 700) {
                     ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                    ...GatsbyImageSharpFluidLimitPresentationSize
                 }
             }
         }

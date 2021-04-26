@@ -28,7 +28,7 @@ export const Box = styled.div`
 
     @media only screen and (min-width: 768px) {
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
     }
 
     @media only screen and (min-width: 768px) {
@@ -37,16 +37,21 @@ export const Box = styled.div`
     }
 `
 
-export const BoxIcon = styled.div`
+export const BoxIcon = styled.div<{ imageURI?: string }>`
     width: 40px;
     height: 40px;
-    margin: 0  0 16px 0;
-    background: ${colors.text};
+    margin: 0  0 24px 0;
+    background: url(${({ imageURI }) => imageURI || ''}) no-repeat;
+    background-size: cover;
+    background-position: center;
 
-    @media only screen and (min-width: 425px) {
+    @media only screen and (min-width: 500px) {
         width: 56px;
         height: 56px;
-        margin: 0 16px 0 0;
+    }
+
+    @media only screen and (min-width: 768px) {
+        margin: 8px 24px 0 0;
     }
 `
 
