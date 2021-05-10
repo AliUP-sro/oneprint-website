@@ -30,8 +30,8 @@ export const Wrapper = styled.div`
         0 21px 42px rgba(0, 0, 0, 0.04);
     }
 
-    @media only screen and (min-width: 768px) {
-        margin: 8px 40px;
+    @media only screen and (min-width: 769px) {
+        margin: 16px 40px;
     }
 `
 
@@ -40,16 +40,12 @@ export const MobilToggleOnePrintWrapper = styled.div`
     align-items: center;
     justify-content: space-between;
     width: 100%;
-
-    // @media only screen and (min-width: 768px) {
-    //     width: auto;
-    // }
 `
 
 export const TextWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     margin-bottom: 8px;
     user-select: none;
 
@@ -79,7 +75,6 @@ export const print = styled.div`
 export const grafickeStudio = styled.div`
     font-size: ${typography.fontSize[20]};
     font-weight: ${typography.fontWeight.light};
-    margin-left: 8px;
 `
 
 // export const subTitle = styled.div`
@@ -116,4 +111,35 @@ export const Link = styled(AnchorLink)`
     &:hover {
         transform: translateY(-2px);
     }
+`
+
+// Menu items
+
+export const MenuItems = styled.div`
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: 767px) {
+        display: none;
+    }
+`
+
+export const MenuItem = styled(AnchorLink)`
+    font-size: ${typography.fontSize[16]};
+    font-weight: ${typography.fontWeight.light};
+    margin-right: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: ${colors.text};
+`
+
+export const MenuItemActionButton = styled(AnchorLink)`
+    font-size: ${typography.fontSize[16]};
+    font-weight: ${typography.fontWeight.light};
+    color: #FFF;
+    padding: 12px 24px;
+    border-radius: 4px;
+    background: #07699A;
+    cursor: pointer;
+    text-decoration: none;
 `

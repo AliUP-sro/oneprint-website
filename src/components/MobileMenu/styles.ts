@@ -4,15 +4,17 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import { colors, typography } from '../../shared/theme'
 
 export const Wrapper = styled.div<{ visible: boolean }>`
+
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
 
     z-index: 99999999;
 
     color: #FFF;
-    background: #393C44;
+    background: #07699A;
     height: 100vh;
+    width: 100%;
     padding: 8px 24px 24px 24px;
 
     transition: all .5s cubic-bezier(0.34, 1.26, 0.64, 1);
@@ -28,6 +30,10 @@ export const Wrapper = styled.div<{ visible: boolean }>`
         // transition: all .5s cubic-bezier(0.34, 1.26, 0.64, 1);
         // transform: translateX(${({ visible }) => !!visible ? '0px' : '-360px'});
     }
+
+    @media only screen and (min-width: 768px) {
+        display: none;
+    }
 `
 
 export const Toggle = styled.div<{ backgroundUri: string }>`
@@ -38,6 +44,10 @@ export const Toggle = styled.div<{ backgroundUri: string }>`
     ${({ backgroundUri }) => !!backgroundUri && `background: url(${backgroundUri}) no-repeat;`};
     background-size: contain;
     background-position: center;
+
+    @media only screen and (min-width: 768px) {
+        display: none;
+    }
 `
 
 export const CrossToggle = styled.div<{ backgroundUri: string }>`
@@ -59,13 +69,15 @@ export const CrossToggle = styled.div<{ backgroundUri: string }>`
 export const HeaderWrapper = styled.div`
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
+    height: 80px;
+    padding: 0 16px;
 `
 
 export const TextWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     margin-bottom: 8px;
 `
 
@@ -89,7 +101,6 @@ export const print = styled.div`
 export const grafickeStudio = styled.div`
     font-size: ${typography.fontSize[20]};
     font-weight: ${typography.fontWeight.light};
-    margin-left: 8px;
 `
 
 // Links

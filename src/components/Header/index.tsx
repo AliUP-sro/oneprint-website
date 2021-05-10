@@ -8,7 +8,6 @@ const Header = () => {
     return (
         <S.Wrapper>
             <S.MobilToggleOnePrintWrapper>
-                <MobileMenu />
                 <S.TextWrapper>
                     <S.onePrintWrapper>
                         <S.one>one</S.one>
@@ -16,6 +15,14 @@ const Header = () => {
                     </S.onePrintWrapper>
                     <S.grafickeStudio>GRAFICKÉ STUDIO</S.grafickeStudio>
                 </S.TextWrapper>
+                <S.MenuItems>
+                    <S.MenuItem to='#about'>O nás</S.MenuItem>
+                    <S.MenuItem to='/#services'>Služby</S.MenuItem>
+                    <S.MenuItem to='/cenik'>Ceník</S.MenuItem>
+                    <S.MenuItem to='/#projects'>Projekty</S.MenuItem>
+                    <S.MenuItemActionButton to='/#contact'>Kontakt</S.MenuItemActionButton>
+                </S.MenuItems>
+                <MobileMenu />
             </S.MobilToggleOnePrintWrapper>
         </S.Wrapper>
     )

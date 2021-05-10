@@ -4,7 +4,7 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import { colors, typography } from '../../../shared/theme'
 
 export const Wrapper = styled.div`
-    background: ${colors.black};
+    background: #07699A;
     color: ${colors.white};
     padding: 40px 0;
     margin-bottom: 100px;
@@ -31,7 +31,7 @@ export const Title = styled.h1`
     text-transform: uppercase;
     font-weight: ${typography.fontWeight.light};
     font-size: ${typography.fontSize[39]};
-    border-bottom: 1px solid #707070;
+    border-bottom: 1px solid #FFFFFF30;
     margin: 0 24px;
     margin-bottom: 24px;
 
@@ -49,8 +49,8 @@ export const Service = styled.div`
     width: 100%;
 
     @media only screen and (max-width: 767px) {
-        &:nth-child(2n+1) {
-            background: #17191E;
+        &:nth-child(2n) {
+            background: #0E628D;
         }
     }
 

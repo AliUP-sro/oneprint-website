@@ -40,7 +40,7 @@ const Layout = ({ children }: Props) => {
             type: 'image/svg.xml'
           },
           {
-            href: 'https://fonts.googleapis.com/css2?family=Raleway:wght@300,400;500;600;700&display=swap',
+            href: 'https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap',
             type: 'stylesheet'
           }
         ]}

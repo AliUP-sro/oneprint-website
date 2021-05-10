@@ -1,21 +1,29 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 // import { Portal } from 'react-portal'
 import { useStaticQuery, graphql } from 'gatsby'
+import useMedia from 'use-media';
 
 import * as S from './styles'
 
 const useMobilToggle = () => {
     const [toggled, setToggled] = useState(false)
+    const isMobile = useMedia('(max-width: 768px)');
+
+    useEffect(() => { 
+        if(!isMobile) {
+            setToggled(false)
+
+            if(!!document && !!window) {
+                document.body.style.overflow = 'auto';
+            }
+        }
+    }, [isMobile])
 
     return {
         visible: toggled,
         show: () => {
             setToggled(true)
-            if(!!document) {
-                if(!!window && window.matchMedia("(max-width: 768px)").matches) {
-                    document.body.style.overflow = 'hidden';
-                }
-            }
+            if(isMobile) document.body.style.overflow = 'hidden';
         },
         hide: () => {
             setToggled(false)
@@ -50,15 +58,6 @@ const MobileMenu = () => {
             <S.Wrapper visible={visible}>
                 <S.HeaderWrapper>
                     <S.CrossToggle onClick={hide} backgroundUri={data.cross.publicURL} />
-                    <S.TextWrapper>
-                        <S.onePrintWrapper>
-                            <S.one>one</S.one>
-                            <S.print>PRINT</S.print>
-                        </S.onePrintWrapper>
-                        <S.grafickeStudio>
-                            GRAFICKE STUDIO
-                        </S.grafickeStudio>
-                    </S.TextWrapper>
                 </S.HeaderWrapper>
 
                 <S.Links>

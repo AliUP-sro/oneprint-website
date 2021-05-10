@@ -12,33 +12,21 @@ const About = () => {
             publicURL
     }}`)
 
+    // Jsme mladé grafické a tiskové studio.
+    // Nejsme velcí - o to lépe se o své klienty staráme. Tvoříme věci, které fungují, máme cit pro kvalitní práci.
+    // Naše práce nás baví a na výsledcích to je také znát
+
+    // Naší misí jste vy a vaše spokojenost.
+
     return (
         <>
             <S.Wrapper id='about'>
-                <S.AboutTextWrapper>
-                    <S.BlobWrapper backgroundUri={data.file.publicURL}>
-                        <S.BlobText>
-                            Jsme mladé grafické studio. Nejsme velcí – o to lépe se o své klienty staráme. Naše práce je i naším hobby.
-                        </S.BlobText>
-                    </S.BlobWrapper>
-                    <S.TextBlocks>
-                        <S.TextBlock>
-                            <S.TextBlockHeader>PROČ MY?</S.TextBlockHeader>
-                    - tvoříme věci, které fungují <br />
-                    - máme cit pro kvalitní práci<br />
-                    - baví nas to<br />
-                    - vymýšlíme style něco nového<br />
-                    - myslíme na lidi, za lidi<br />
-                    - a proč vlastně ne?
-                </S.TextBlock>
-                        <S.TextBlock>
-                            <S.TextBlockHeader>NAŠE MISE</S.TextBlockHeader>
-                    Naší mise je vase spokojenost. <br /><br />
-
-                    Vytvoříme pro Vás originální logo na míru, firemní identitu, moderní webdesign, reklamní grafiku, responzivní webové stránky, poutavé tiskové materiály nebo design obalů, který vydělává.
-                </S.TextBlock>
-                    </S.TextBlocks>
-                </S.AboutTextWrapper>
+                <S.TextBlocks>
+                    <S.TextBlock>Jsme mladé grafické a tiskové studio.</S.TextBlock>
+                    <S.TextBlock>Nejsme velcí - o to lépe se o své klienty staráme. Tvoříme věci, které fungují, máme cit pro kvalitní práci.</S.TextBlock>
+                    <S.TextBlock>Naše práce nás baví a na výsledcích to je také znát.</S.TextBlock>
+                    <S.TextBlock>Naší misí jste vy a vaše spokojenost.</S.TextBlock>
+                </S.TextBlocks>
             </S.Wrapper>
             <AboutBoxes />
         </>

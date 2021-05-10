@@ -11,8 +11,8 @@ const Footer: React.FunctionComponent = () => {
                     +420 721 134 180 <br/>
                     danda@oneprint.cz  <br/>
                     Buzulucká 8, 370 05, České Budějovice, 370 05  <br/>
-                    IČO:  <br/>
-                    DIČ:
+                    IČO: 107 41 089 <br/>
+                    DIČ: CZ10741089
                 </S.Text>
             </S.Box>
             <S.Box>
