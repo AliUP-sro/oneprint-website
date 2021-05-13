@@ -33,35 +33,35 @@ const ShowcaseBoxes = ({ }: Props) => {
     const data = useStaticQuery(graphql`query {
         desk: file(relativePath: { eq: "desk.jpg" }) {
             childImageSharp {
-                fluid(maxWidth: 1400, quality: 100) {
+                fluid(maxWidth: 600, quality: 100, webpQuality: 100) {
                     ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
             }
         }
         ruce: file(relativePath: { eq: "ruce.jpg" }) {
             childImageSharp {
-                fluid(maxWidth: 1400, quality: 100) {
+                fluid(maxWidth: 600, quality: 100, webpQuality: 100) {
                     ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
             }
         }
         colors: file(relativePath: { eq: "colors.jpg" }) {
             childImageSharp {
-                fluid(maxWidth: 1400, quality: 100) {
+                fluid(maxWidth: 600, quality: 100, webpQuality: 100) {
                     ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
             }
         }
         textil: file(relativePath: { eq: "textil.jpg" }) {
             childImageSharp {
-                fluid(maxWidth: 1400, quality: 100) {
+                fluid(maxWidth: 600, quality: 100, webpQuality: 100) {
                     ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
             }
         }
         boxedLogo: file(relativePath: { eq: "box_logo.jpg" }) {
             childImageSharp {
-                fluid(maxWidth: 1400, quality: 100) {
+                fluid(maxWidth: 600, quality: 100, webpQuality: 100) {
                     ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
             }
@@ -125,7 +125,7 @@ const ShowcaseBoxes = ({ }: Props) => {
                             {
                                 !!card.image && <Img
                                     fluid={card.image}
-                                    style={{ width: '120%', height: '120%' }}
+                                    style={{ width: '110%', height: '110%' }}
                                     imgStyle={{
                                         objectFit: "cover"
                                     }}

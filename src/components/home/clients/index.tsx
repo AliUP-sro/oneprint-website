@@ -34,7 +34,7 @@ const Clients = () => {
             <S.InnerWrapper>
             <S.BlobWrapper backgroundUri={data.file.publicURL}>
                 <S.BlobHeaderText>Klienti</S.BlobHeaderText>
-                <S.BlobText>Naši spokojení klienti, se kterými jsme již pracovali</S.BlobText>
+                <S.BlobText>Naši spokojení klienti, se kterými spolupracujeme</S.BlobText>
             </S.BlobWrapper>
             <S.LogosWrapper>
                 {
