@@ -40,8 +40,6 @@ const About = () => {
         }
     }`)
 
-    console.log({ data })
-
     return (
         <S.Wrapper>
                 <S.Box>

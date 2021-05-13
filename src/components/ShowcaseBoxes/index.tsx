@@ -33,35 +33,35 @@ const ShowcaseBoxes = ({ }: Props) => {
     const data = useStaticQuery(graphql`query {
         desk: file(relativePath: { eq: "desk.jpg" }) {
             childImageSharp {
-                fluid(maxWidth: 700) {
+                fluid(maxWidth: 1400, quality: 100) {
                     ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
             }
         }
         ruce: file(relativePath: { eq: "ruce.jpg" }) {
             childImageSharp {
-                fluid(maxWidth: 700) {
+                fluid(maxWidth: 1400, quality: 100) {
                     ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
             }
         }
         colors: file(relativePath: { eq: "colors.jpg" }) {
             childImageSharp {
-                fluid(maxWidth: 700) {
+                fluid(maxWidth: 1400, quality: 100) {
                     ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
             }
         }
         textil: file(relativePath: { eq: "textil.jpg" }) {
             childImageSharp {
-                fluid(maxWidth: 700) {
+                fluid(maxWidth: 1400, quality: 100) {
                     ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
             }
         }
         boxedLogo: file(relativePath: { eq: "box_logo.jpg" }) {
             childImageSharp {
-                fluid(maxWidth: 700) {
+                fluid(maxWidth: 1400, quality: 100) {
                     ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
             }
@@ -92,7 +92,7 @@ const ShowcaseBoxes = ({ }: Props) => {
         },
         {
             background: colors.mainPageCards.slime,
-            text: 'Propagační tisk'
+            text: 'Digitální tisk'
         },
         {
             image: data.colors.childImageSharp.fluid
@@ -106,7 +106,7 @@ const ShowcaseBoxes = ({ }: Props) => {
         },
         {
             background: colors.mainPageCards.black,
-            text: 'Sublimace'
+            text: 'Samolepky'
         },
         {
             background: colors.mainPageCards.slime,
