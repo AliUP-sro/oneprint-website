@@ -4,25 +4,36 @@ import { colors, typography } from '../../../shared/theme'
 
 export const Wrapper = styled.div`
     padding: 40px 0;
+    display: grid;
+    place-items: center;
 
     @media only screen and (min-width: 1024px) {
         padding: 80px 0;
     }
 `
 
-export const TextBlocks = styled.div`
+
+export const BloWrapper = styled.div<{ backgroundUri: string }>`
+    position: relative;
+
     display: flex;
     flex-direction: column;
+    justify-content: center;
 
-    max-width: 80%;
-    margin: 0 auto;
+    width: 90%;
+    max-width: 500px;
+    height: 300px;
+
+    ${({ backgroundUri }) => !!backgroundUri && `background: url(${backgroundUri}) no-repeat;`}
+    background-size: contain;
+    background-position: center;
 `
 
-export const TextBlock = styled.div`
-    font-size: ${typography.fontSize[20]};
+export const BlobText = styled.div`
+    font-size: ${typography.fontSize[16]};
     font-weight: ${typography.fontWeight.light};
-    line-height: 30px;
     color: ${colors.text};
-
-    margin: 16px 0;
+    margin-bottom: 12px;
+    width: 100%;
+    text-align: center;
 `
