@@ -22,7 +22,7 @@ export const BloWrapper = styled.div<{ backgroundUri: string }>`
 
     width: 90%;
     max-width: 500px;
-    height: 300px;
+    height: 320px;
 
     ${({ backgroundUri }) => !!backgroundUri && `background: url(${backgroundUri}) no-repeat;`}
     background-size: contain;
@@ -30,7 +30,7 @@ export const BloWrapper = styled.div<{ backgroundUri: string }>`
 `
 
 export const BlobText = styled.div`
-    font-size: ${typography.fontSize[16]};
+    font-size: ${typography.fontSize[20]};
     font-weight: ${typography.fontWeight.light};
     color: ${colors.text};
     margin-bottom: 12px;
