@@ -33,7 +33,7 @@ const ShowcaseBoxes = ({ }: Props) => {
     const data = useStaticQuery(graphql`query {
         desk: file(relativePath: { eq: "desk.jpg" }) {
             childImageSharp {
-                fluid(maxWidth: 600, quality: 100, webpQuality: 100) {
+                fluid(maxWidth: 600, quality: 10) {
                     ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
             }

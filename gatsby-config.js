@@ -6,6 +6,19 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-XLZ2TS83ZB", // Google Analytics / GA
+        ],
+        pluginConfig: {
+          head: true,
+          anonymize_ip: true,
+        },
+      }
+    },
+
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -19,7 +32,7 @@ module.exports = {
     `gatsby-plugin-typescript`,
 
     // images
-    `gatsby-transformer-sharp`, 
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     'gatsby-plugin-styled-components',
 
