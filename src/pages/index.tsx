@@ -4,6 +4,7 @@ import Layout from '../layouts/index'
 import Header from '../components/Header'
 import ShowcaseBoxes from '../components/ShowcaseBoxes'
 import Footer from '../components/Footer'
+import SEO from '../components/SEO'
 
 import AboutPage from '../components/home/about'
 import Services from '../components/home/services'
@@ -13,6 +14,7 @@ import Clients from '../components/home/clients'
 const Home = () => {
   return (
     <Layout>
+      <SEO />
       <Header />
       <ShowcaseBoxes />
       <AboutPage />

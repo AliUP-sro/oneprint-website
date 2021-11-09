@@ -2,7 +2,11 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
+    siteUrl: 'https://oneprint.cz/',
     title: `onePRINT`,
+    description: 'Mladé grafické a tiskové studio. Tvoříme věci, které fungují, máme cit pro kvalitní práci. Naší misí jste vy a vaše spokojenost.',
+    keywords: 'oneprint,print,tisk,velkoformátový tisk,gravírování,reklamní textil,digitální tisk,web design,samolepky,eshop,graficke studio',
+    author: `AliUP s.r.o. <aliup.cz>`
   },
   plugins: [
     {
@@ -17,7 +21,12 @@ module.exports = {
         },
       }
     },
-
+    // {
+    //   resolve: `gatsby-plugin-facebook-pixel`,
+    //   options: {
+    //     pixelId: "312701116856638",
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
